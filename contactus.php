@@ -1,17 +1,10 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Company-HTML Bootstrap theme</title>
-
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -22,19 +15,13 @@
   input
   {
     font-weight: bold;
-    font-color: black;
+    color: black;
 
   }
 
-  </style>
-  <!-- =======================================================
-    Theme Name: Company
-    Theme URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+</style>
+  
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -48,7 +35,7 @@
 							<span class="icon-bar"></span>
 						</button>
             <div class="navbar-brand">
-              <a href="index.php"><h1><span style="color:red"><i>Leave</i>&nbsp;&nbsp;<i style="color: Black">Automation</i>&nbsp;&nbsp;</span><i style="color: red">System</i></h1></a>
+              <a href="index.php"><h1><span style="color:red"><i>C-</i>&nbsp;&nbsp;<i style="color: Black">MAN</i>&nbsp;&nbsp;</span><i style="color: red">System</i></h1></a>
             </div>
           </div>
 
@@ -56,11 +43,10 @@
             <div class="menu">
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation"><a href="index.php" id='co' >Home</a></li>
-                <li role="presentation"><a href="about.php" id='co' >About Us</a></li>
+                <!-- <li role="presentation"><a href="about.php" id='co' >About Us</a></li> -->
                 
-                <li role="presentation"><a href="contactus.php" id='co' > Contact Us</a></li>
-				        <li role="presentation"><a href="registration.php" id='co' >Registration Here</a></li>
-               
+                <li role="presentation"><a href="contactus.php" id='co' >Contact Us</a></li>
+				        <li role="presentation"><a href="new_reg.php" id='co' >Sign Up</a></li>
               </ul>
             </div>
           </div>
@@ -134,7 +120,7 @@
   <!--/#conatcat-info-->
 
   <footer>
-    <div class="footer" style="background-color:red">
+    <div class="footer" style="background-color:gray">
       <div class="container">
         <div class="social-icon">
           <div class="col-md-4">
@@ -152,13 +138,8 @@
           <div class="copyright" style="color:black;font-weight:bold;">
             &copy; All Rights Reserved.
             <div class="credits">
-              <!--
-                All the links in the footer should remain intact.
-                You can delete the links only if you purchased the pro version.
-                Licensing information: https://bootstrapmade.com/license/
-                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Company
-              -->
-              <a href="#" style="color:black;font-weight:bold;">Made </a> By <a href="#" style="color:black;font-weight:bold;">Gaurav Prajapati</a>
+             
+              <a href="#" style="color:black;font-weight:bold;">Made </a> By <a href="#" style="color:black;font-weight:bold;">Gaurav And Anmol</a>
             </div>
           </div>
         </div>

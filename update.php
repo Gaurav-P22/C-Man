@@ -77,8 +77,8 @@ else{header("location:ViewStock.php?msg=Error!!!!!!!!!!!!!");
                 
                 <li role="presentation"><a href="AddStock.php" id='co' >Add Stock</a></li>
                 <li role="presentation"><a href="ViewStock.php" id='co' >View Stock</a></li>
-				<li role="presentation"><a href="DeleteS.php" id='co' >Delete Stock</a></li>
-        <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li>
+				<!-- <li role="presentation"><a href="DeleteS.php" id='co' >Delete Stock</a></li>
+        <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li> -->
         <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li>
         <li role="presentation"><a href="DeleteF.php" id='co' >Delete Food</a></li> -->
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>

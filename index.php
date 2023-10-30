@@ -49,8 +49,8 @@
                 <li role="presentation"><a href="index.php" id='co' >Home</a></li>
                 
                 <li role="presentation"><a href="contactus.php" id='co' >Contact Us</a></li>
-                <li role="presentation"><a href="Main.php" id='co' > New Page</a></li>
-				<li role="presentation"><a href="new_reg.php" id='co' >SIGN UP </a></li>
+               
+				<li role="presentation"><a href="reg.php" id='co' >SIGN UP </a></li>
                
               </ul>
             </div>
