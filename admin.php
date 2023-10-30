@@ -9,10 +9,6 @@ if($se==null){
 
 $message="Admin";
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
