@@ -17,6 +17,7 @@ include("config.php");
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link href="css/prettyPhoto.css" rel="stylesheet">
+  
   <link href="css/style.css" rel="stylesheet" /><style>
   #co:hover{color:red;}
   input
@@ -104,53 +105,40 @@ include("config.php");
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/extra/foodbg.jpg);background-attachment:fixed">
      
-          <div class="container" style="width:80%;height:80%;margin:4% 10%;border: 4px solid gray; background-color:#f4978e;border-radius:4px 6px; overflow:auto; text-align:center;padding:4%" >
+        <div class="container" style="width:80%;height:80%;margin:4% 10%;border: 4px solid gray; background-color:#f4978e;border-radius:4px 6px; overflow:auto; text-align:center;padding:4%" >
           <!-- <h1 class=" " style="text-align: center;">A Clean &amp; Minimal Landing Template</h1 -->
-          <div class="flex">
-        <div class="card">
+          <div class="flex m-3">
+          <?php
+           $query="Select *from food";
+           $data=mysqli_query($con,$query);
+           $total=mysqli_num_rows($data);
+           if($total!=0)
+           {
+            
+    while($result=mysqli_fetch_assoc($data))
+    {
+      echo '<div class="card">
+            <img src='.$result["url"].' class="card-img" alt="">
+            <h3>'.$result["title"].'</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
+            
+            <button class="btn btn-warning text-light"><a href="">Order Here</a></button>
+        </div>';
 
-            <img src="https://source.unsplash.com/1600x900/?burger" class="card-img" alt="">
-            <h3>Veg Supreme Burger</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="">Order</a></button>
-        </div>
-        <div class="card">
-            <img src="https://source.unsplash.com/1600x900/?salad" class="card-img" alt="">
-            <h3>Green Salad</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="">Order</a></button>
-        </div>
-        <div class="card">
-            <img src="https://source.unsplash.com/1600x900/?Samosa" class="card-img" alt="">
-            <h3>Supreme Samosa</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="">Order</a></button>
-        </div>
-        <div class="card">
-            <img src="https://source.unsplash.com/1600x900/?sweet" class="card-img" alt="">
-            <h3>Sweet</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="">Order</a></button>
-        </div>
-<div class="card">
-            <img src="https://source.unsplash.com/1600x900/?cake" class="card-img" alt="">
-            <h3>Cake</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="">Order</a></button>
-        </div>
-<div class="card">
-            <img src="https://source.unsplash.com/1600x900/?pasta" class="card-img" alt="">
-            <h3>Pasta</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            <button class="btn btn-primary"><a href="" class="text-light">Order</a></button>
-        </div>
+    
+  }
+}
+
+      ?>
+ 
+        
     </div>
           </div>
           </div>
           </div>
           </div>
   </section>
- 
+  
  
   
   <section id="conatcat-info">
