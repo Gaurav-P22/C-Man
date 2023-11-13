@@ -235,7 +235,7 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
 <div class="form-group" style="background-color: fb8500;">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4"><br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="btn btn-warning" name="submit" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="btn btn-primary" name="submit" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
   </div>
 </div>
 
@@ -306,26 +306,30 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
       </div>
     </div>
   </footer>
-  <script>  
-function validateform(){  
-var password=document.myform.t2.value;  
-var pin=document.myform.t6.value;  
-  
- if(password.length<10){  
-  alert("mobile no must be 10 Digits.");  
-  return false;  
-  } else if(password.length>10){  
-  alert("mobile no must be 10 Digits.");  
-  return false;  
-  }   else if(pin.length<6){  
-  alert("pincode must be 6 Digits.");  
-  return false;  
-  } else if(pin.length>6){  
-  alert("pincode must be 6 Digits.");  
-  return false;  
-  }   
-}  
+  <script>
+function validateform() {
+    // Get input values
+    var fname = document.forms["contact_form"]["fname"].value;
+    var lname = document.forms["contact_form"]["lname"].value;
+    var mno = document.forms["contact_form"]["mno"].value;
+    var email = document.forms["contact_form"]["email"].value;
+    var add = document.forms["contact_form"]["add"].value;
+    var dob = document.forms["contact_form"]["dob"].value;
+    var pcode = document.forms["contact_form"]["pcode"].value;
+    var pass = document.forms["contact_form"]["pass"].value;
+
+    // Simple validation example (you can add more complex validation)
+    if (fname == "" || lname == "" || mno == "" || email == "" || add == "" || dob == "" || pcode == "" || pass == "") {
+        alert("All fields must be filled out");
+        return false;
+    }
+
+    // You can add more specific validation for each field if needed
+
+    return true;
+}
 </script>
+
 
 
 
