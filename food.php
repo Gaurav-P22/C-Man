@@ -17,8 +17,12 @@ include("config.php");
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link href="css/prettyPhoto.css" rel="stylesheet">
+  <!-- <link href="bootstrap/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet"> -->
   
-  <link href="css/style.css" rel="stylesheet" /><style>
+  <link href="css/style.css" rel="stylesheet" />
+  <script href="bootstrap/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  <style>
+    
   #co:hover{color:red;}
   input
   {
@@ -40,6 +44,8 @@ include("config.php");
     padding: 10px;
     margin: 5px;
     border-radius: 14px;
+    
+    /* filter: brightness(10%); */
 }
 
 .card:hover{
@@ -47,12 +53,15 @@ include("config.php");
     width: 290px;
     border: 1px solid white;
     border-radius: 20px;
+    color: whitesmoke;
     box-shadow: 5px 8px 16px 6px #eee;
+     filter: brightness(2); 
 }
 
 .card-img{
     width: 100%;
     border-radius: 14px;
+    filter: brightness(40%);
 }
 .flex{
     display: flex;
@@ -102,12 +111,12 @@ include("config.php");
 
   <section id="main-slider" class="no-margin">
     <div class="carousel slide">
-      <div class="carousel-inner">
+      <div class="">
         <div class="item active" style="background-image: url(images/extra/foodbg.jpg);background-attachment:fixed">
      
-        <div class="container" style="width:80%;height:80%;margin:4% 10%;border: 4px solid gray; background-color:#f4978e;border-radius:4px 6px; overflow:auto; text-align:center;padding:4%" >
+        <div class="container m-3" style="width:80%;height:80%;margin:4% 8%;border: 4px solid gray; background-color:#f4978e;border-radius:4px 6px; overflow:auto; text-align:center;padding:4%" >
           <!-- <h1 class=" " style="text-align: center;">A Clean &amp; Minimal Landing Template</h1 -->
-          <div class="flex m-3">
+          <div class="flex">
           <?php
            $query="Select *from food";
            $data=mysqli_query($con,$query);
@@ -122,7 +131,7 @@ include("config.php");
             <h3>'.$result["title"].'</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
             
-            <button class="btn btn-warning text-light"><a href="">Order Here</a></button>
+            <button class="btn btn-primary text-light"><a href="" class="text-light" style="color:whitesmoke">Order Here</a></button>
         </div>';
 
     
