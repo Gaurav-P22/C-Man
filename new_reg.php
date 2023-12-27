@@ -69,11 +69,11 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
           <div class="navbar-collapse collapse">
             <div class="menu">
               <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation"><a href="new_reg.php" id='co' >Add Employee</a></li>
+                <li role="presentation" style="color: red;"><a href="new_reg.php" id='co' style="color: red;">Add Employee</a></li>
                 
                 <li role="presentation"><a href="ViewEmp.php" id='co' >View Employee</a></li>
                 <li role="presentation"><a href="ViewStockE.php" id='co' >View Stock</a></li>
-				<li role="presentation"><a href="ViewFood.php" id='co' >View Food</a></li>
+				<li role="presentation"><a href="food.php" id='co' >View Food</a></li>
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
 
                

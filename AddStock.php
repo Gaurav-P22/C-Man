@@ -1,4 +1,15 @@
 <?php $val=1 ?>
+<?php
+session_start();
+$se=$_SESSION['eem'];
+if($se==null){
+  
+  header("location:index.php?msg=plz login first");
+  
+}
+
+$message="Employee";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +35,8 @@
   <?php
 if(isset($_REQUEST['submit']))
   {
-   $val+=1;
+    
+   $val=$_POST;
   $name=$_POST['PName'];
   $des=$_POST['Des'];
   
@@ -37,6 +49,7 @@ if(isset($_REQUEST['submit']))
   echo "<h1>$b</h1>";
   
   $con=mysqli_connect("localhost","root","","project");
+  $sql2="select id from stock";
   $sql="insert into stock (Pname,description,sname,doM,doE,quantity,contact) values('$name','$des','$b','$c','$d','$e','$f')";
     if(mysqli_query($con,$sql))
     {     
@@ -73,12 +86,9 @@ else{header("location:AddStock.php?msg=Error!!!!!!!!!!!!!");
               <ul class="nav nav-tabs" role="tablist">
                
                 
-                <li role="presentation"><a href="AddStock.php" id='co' >Add Stock</a></li>
+                <li role="presentation"><a href="AddStock.php" id='co' style="color:red;" >Add Stock</a></li>
                 <li role="presentation"><a href="ViewStock.php" id='co' >View Stock</a></li>
-				<!-- <li role="presentation"><a href="DeleteS.php" id='co' >Delete Stock</a></li>
-        <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li> -->
-        <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li>
-        <li role="presentation"><a href="DeleteF.php" id='co' >Delete Food</a></li> -->
+				
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
 
 
@@ -285,17 +295,49 @@ else{header("location:AddStock.php?msg=Error!!!!!!!!!!!!!");
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script>
 function validateDates() {
+    // Retrieve form inputs
+    const productName = document.getElementById("PName").value;
+    const description = document.getElementById("Des").value;
+    const supplier = document.getElementById("supplier").value;
     const manufacturingDate = new Date(document.getElementById("manufacturingDate").value);
     const expiryDate = new Date(document.getElementById("expiryDate").value);
+    const today = new Date();
+
+    // Validate Product Name, Description, and Supplier
+    if (productName.trim() === '' || description.trim() === '' || supplier === '') {
+        alert("Please fill out all the required fields.");
+        return false;
+    }
+
+    // Validate Date of Manufacturing and Expiry Date
+    if (manufacturingDate > today) {
+        alert("Manufacturing date cannot be in the future.");
+        return false;
+    }
 
     if (manufacturingDate > expiryDate) {
         alert("Expiry date must be after manufacturing date.");
         return false;
     }
 
+    // Calculate the difference in days between manufacturing and expiry date
+    const timeDifference = expiryDate.getTime() - manufacturingDate.getTime();
+    const daysDifference = timeDifference / (1000 * 3600 * 24);
+
+    // Validate if the difference is greater than a certain threshold (e.g., 30 days)
+    const maxDifference = 30;
+
+    if (daysDifference < 0 || daysDifference > maxDifference) {
+        alert(`The difference between manufacturing and expiry date must be between 0 and ${maxDifference} days.`);
+        return false;
+    }
+
+    // If all validations pass, the form will submit
     return true;
 }
 </script>
+
+
   <script src="js/jquery-2.1.1.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>

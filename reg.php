@@ -40,9 +40,9 @@ if(isset($_REQUEST['submit']))
   $sql="insert into employee2(name,mobile,email,address,dob,pincode,password) values('$a','$b','$c','$d','$e','$f','$h')";
     if(mysqli_query($con,$sql))
     {     
-      header("location:new_reg.php?msg=Registration Successfully");      
+      header("location:reg.php?msg=Registration Successfully");      
     }   
-else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");      
+else{header("location:reg.php?msg=Error!!!!!!!!!!!!!");      
     }   
   }   
 ?>
@@ -73,7 +73,7 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
                 
                 <li role="presentation"><a href="contactus.php" id='co' >Contact Us</a></li>
                
-				<li role="presentation"><a href="reg.php" id='co' >SIGN UP </a></li>
+				<li role="presentation" style="color: red;"><a href="reg.php" id='co' style="color: red;" >SIGN UP </a></li>
         
 
                

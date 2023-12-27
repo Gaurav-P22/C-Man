@@ -1,6 +1,17 @@
 <?php
 include("config.php");
 ?>
+<?php
+session_start();
+$se=$_SESSION['em'];
+if($se==null){
+  
+  header("location:index.php?msg=plz login first");
+  
+}
+
+$message="Admin";
+?>
  
 
 <!DOCTYPE html>
@@ -52,7 +63,7 @@ include("config.php");
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation"><a href="new_reg.php" id='co' >Add Employee</a></li>
                 
-                <li role="presentation"><a href="ViewEmp.php" id='co' >View Employee</a></li>
+                <li role="presentation" style="color: red;"><a href="ViewEmp.php" id='co' style="color: red;">View Employee</a></li>
                 <li role="presentation"><a href="ViewStockE.php" id='co'>View Stock</a></li>
 				<li role="presentation"><a href="ViewFood.php" id='co' >View Food</a></li>
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
@@ -72,7 +83,7 @@ include("config.php");
         <div class="item active" style="background-image: url(images/extra/employeeBg.jpg);background-attachment:fixed">
      <!-- <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:#6f1d1b; text-align:center; padding:30vh; font-size:8vw">WelCome <?php echo $message ?></h1> -->
           <div class="container">
-           <form style="background-color: ; margin:3vw">
+           <form style=" margin:3vw">
           
   <?php
            $query="Select *from employee2";
@@ -98,10 +109,11 @@ include("config.php");
   </thead>
   <tbody>
     <?php
+    $i=1;
     while($result=mysqli_fetch_assoc($data))
     {
       echo "<tr>
-      <td >".$result['id']."</td>
+      <td >".$i++."</td>
       <td >".$result['name']."</td>
       <td >".$result['mobile']."</td>
       <td >".$result['email']."</td>

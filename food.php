@@ -49,7 +49,7 @@ include("config.php");
 }
 
 .card:hover{
-    transform: rotate(3deg);
+    transform: rotate(1deg);
     width: 290px;
     border: 1px solid white;
     border-radius: 20px;
@@ -64,7 +64,7 @@ include("config.php");
     filter: brightness(40%);
 }
 .flex{
-    display: flex;
+    display:flex;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -97,7 +97,7 @@ include("config.php");
                 
                 <li role="presentation"><a href="ViewEmp.php" id='co' >View Employee</a></li>
                 <li role="presentation"><a href="ViewStockE.php" id='co' >View Stock</a></li>
-				<li role="presentation"><a href="food.php" id='co' >View Food</a></li>
+				<li role="presentation"><a href="food.php" id='co' style="color: red;">View Food</a></li>
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
 
                
@@ -110,7 +110,7 @@ include("config.php");
   </header>
 
   <section id="main-slider" class="no-margin">
-    <div class="carousel slide">
+    <div >
       <div class="">
         <div class="item active" style="background-image: url(images/extra/foodbg.jpg);background-attachment:fixed">
      
@@ -130,8 +130,8 @@ include("config.php");
             <img src='.$result["url"].' class="card-img" alt="">
             <h3>'.$result["title"].'</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat!</p>
-            
-            <button class="btn btn-primary text-light"><a href="" class="text-light" style="color:whitesmoke">Order Here</a></button>
+           
+            <button class="btn btn-primary text-light"><a href="order.php?name='.$result["title"].'" class="text-light" " style="color:whitesmoke">Order Here</a></button>
         </div>';
 
     

@@ -1,6 +1,17 @@
 <?php
 include("config.php");
 ?>
+<?php
+session_start();
+$se=$_SESSION['eem'];
+if($se==null){
+  
+  header("location:index.php?msg=plz login first");
+  
+}
+
+$message="Employee";
+?>
  
 
 <!DOCTYPE html>
@@ -53,7 +64,7 @@ include("config.php");
                
                 
                 <li role="presentation"><a href="AddStock.php" id='co' >Add Stock</a></li>
-                <li role="presentation"><a href="ViewStock.php" id='co' >View Stock</a></li>
+                <li role="presentation"><a href="ViewStock.php" id='co' style="color: red;">View Stock</a></li>
 				<!-- <li role="presentation"><a href="DeleteS.php" id='co' >Delete Stock</a></li>
         <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li> -->
         <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li>
@@ -102,10 +113,11 @@ include("config.php");
   </thead>
   <tbody>
     <?php
+    $i=1;
     while($result=mysqli_fetch_assoc($data))
     {
       echo "<tr>
-      <td >".$result['id']."</td>
+      <td >".$i++."</td>
       <td >".$result['Pname']."</td>
       <td >".$result['description']."</td>
       <td >".$result['sname']."</td>

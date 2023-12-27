@@ -45,8 +45,8 @@
                 <li role="presentation"><a href="index.php" id='co' >Home</a></li>
                 <!-- <li role="presentation"><a href="about.php" id='co' >About Us</a></li> -->
                 
-                <li role="presentation"><a href="contactus.php" id='co' >Contact Us</a></li>
-				        <li role="presentation"><a href="new_reg.php" id='co' >Sign Up</a></li>
+                <li role="presentation"><a href="contactus.php" id='co' style="color: red;" >Contact Us</a></li>
+				        <li role="presentation"><a href="reg.php" id='co' >Sign Up</a></li>
               </ul>
             </div>
           </div>
