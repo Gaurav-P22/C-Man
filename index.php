@@ -35,11 +35,6 @@ if (isset($_GET['logout'])) {
     color: black;
 
   }
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> origin/master
   </style>
 </head>
 
