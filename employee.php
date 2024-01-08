@@ -6,8 +6,19 @@ if($se==null){
   header("location:index.php?msg=plz login first");
   
 }
+<<<<<<< HEAD
 
 $message="Employee";
+=======
+include("config.php");
+$q = "SELECT * FROM employee2 WHERE email='$se'";
+$result = mysqli_query($con, $q);
+
+if ($row = mysqli_fetch_assoc($result)) {
+    $adminName = $row['name']; // Assuming the column name is 'admin_name' in your database
+    $message = "Welcome, $adminName";
+}
+>>>>>>> origin/master
 ?>
 
 
@@ -35,6 +46,10 @@ $message="Employee";
     color: black;
 
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/master
 
   </style>
   
@@ -66,9 +81,15 @@ $message="Employee";
                 <li role="presentation"><a href="ViewStock.php" id='co' >View Stock</a></li>
 				<!-- <li role="presentation"><a href="DeleteS.php" id='co' >Delete Stock</a></li>
         <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li> -->
+<<<<<<< HEAD
         <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li>
         <li role="presentation"><a href="DeleteF.php" id='co' >Delete Food</a></li> -->
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
+=======
+        <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li> -->
+        <li role="presentation"><a href="updateEmployee.php" id='co' >Profile</a></li> 
+        <li role="presentation"><a href="index.php?logout=true" id='co' >LogOut</a></li>
+>>>>>>> origin/master
 
 
                
@@ -84,7 +105,11 @@ $message="Employee";
     <div class="carousel slide">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/extra/employeeBg.jpg);background-attachment:fixed">
+<<<<<<< HEAD
         <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:#6f1d1b; text-align:center; padding:30vh; font-size:8vw">WelCome <?php echo $message ?></h1>
+=======
+        <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:#6f1d1b; text-align:center; padding:30vh; font-size:6vw"> <?php echo $message ?></h1>
+>>>>>>> origin/master
           <div class="container">
             
           </div>

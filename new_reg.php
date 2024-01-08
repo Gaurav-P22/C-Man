@@ -92,7 +92,11 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
 <br>
 <br>
 <br>
+<<<<<<< HEAD
 <section>
+=======
+<section style="background-image: url(./addS.jpg); margin-top:-45px;background-attachment:fixed;background-size:cover">
+>>>>>>> origin/master
 <center>
 <div class="container" >
 <br>
@@ -250,7 +254,11 @@ else{header("location:new_reg.php?msg=Error!!!!!!!!!!!!!");
 
 
   
+<<<<<<< HEAD
   <section id="conatcat-info">
+=======
+  <section id="conatcat-info" style="margin-top: -15px;">
+>>>>>>> origin/master
     <div class="container">
       <div class="row">
         <div class="col-sm-8">

@@ -69,6 +69,18 @@ $message="Employee";
         <li role="presentation"><a href="UpdateD.php" id='co' >Update Details</a></li> -->
         <!-- <li role="presentation"><a href="UpdateFood.php" id='co' >Update Food</a></li>
         <li role="presentation"><a href="DeleteF.php" id='co' >Delete Food</a></li> -->
+<<<<<<< HEAD
+=======
+        <li role="presentation"><a href="updateEmployee.php" id='co'>Profile</a></li>
+        <li role="presentation" class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id='co'>
+                    Others Work <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="AddSupplier.php" id='co' style="color: red;">Add Supplier</a></li>
+                  </ul>
+                  </li>
+>>>>>>> origin/master
         <li role="presentation"><a href="index.php" id='co' >LogOut</a></li>
 
 

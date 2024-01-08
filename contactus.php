@@ -58,12 +58,20 @@
   <section id="main-slider" class="no-margin">
     <div class="carousel slide">
       <div class="carousel-inner">
+<<<<<<< HEAD
         <div class="item active" style="background-image: url(rawpixel-652547-unsplash.jpg);background-attachment:fixed">
+=======
+        <div class="item active" style="background-image: url(./msg.jpg);background-attachment:fixed">
+>>>>>>> origin/master
           <div class="container">
             <div class="row slide-margin">
               <div class="col-sm-12">
                     <p class="animation animated-item-3" style="color:red"></p>
+<<<<<<< HEAD
 				  <div class="form-control" style="height:400px;width:950px;font-weight:bold;background-color:rgba(220,120,50,0.4); box-shadow:10px 10px 10px 20px grey;">
+=======
+				  <div class="form-control" style="height:400px;width:950px;font-weight:bold;background-color:rgba(220,120,50,0.4); box-shadow:10px 10px 5px 10px grey;">
+>>>>>>> origin/master
 					<form action="contact1.php" method='POST'>
 					<h2 style="color: black">Message to Us</h2>
 					

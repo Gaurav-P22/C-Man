@@ -1,5 +1,18 @@
 
+<<<<<<< HEAD
 <!--  -->
+=======
+<?php
+session_start();
+
+// Logout logic
+if (isset($_GET['logout'])) {
+    // Log out by destroying the session
+    session_destroy();
+    header("location: index.php?msg=logged out successfully");
+    exit();
+}?>
+>>>>>>> origin/master
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +35,11 @@
     color: black;
 
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
   </style>
 </head>
 
@@ -63,16 +80,28 @@
   <section id="main-slider" class="no-margin">
     <div class="carousel slide">
       <div class="carousel-inner">
+<<<<<<< HEAD
         <div class="item active" style="background-image: url(images/extra/chefs-bg.jpg);background-attachment:fixed">
+=======
+        <div class="item active" style="background-image: url(images/extra/chefs-bg.jpg);background-attachment:fixed;background-size:cover;width:100vw;height:100vh;">
+>>>>>>> origin/master
           <div class="container">
             <div class="row slide-margin">
 
               <div class="col-sm-6">
+<<<<<<< HEAD
                 <div class="carousel-content">
                   <p class="animation animated-item-3" style="color:grey"></p>
 				  <div class="form-control" style="height:300px;width:350px;font-weight:bold;background-color:grey; box-shadow:6px 6px 7px 7px grey">
 					<form action="validateLogin.php" method='POST'>
 					<h3 style="color: black">Log in </h3>
+=======
+                <div class="carousel-content" style="margin-top:-2%;">
+                  
+				  <div class="form-control" style="height:300px;width:350px;font-weight:bold;background-color:grey; box-shadow:6px 6px 7px 7px grey;padding:20px">
+					<form action="validateLogin.php" method='POST'>
+					<Legend><h4 class="animation animated-item-3" style="color:#e5e5e5;font-weight:20px; font-weight:900;">LOGIN</h4></Legend>
+>>>>>>> origin/master
 					<select class='form-control' name="type">
        <option disabled="">Login Type</option>
          <option  value="admin">Manager</option>
@@ -179,6 +208,30 @@
   <script src="js/jquery.isotope.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/functions.js"></script>
+<<<<<<< HEAD
+=======
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.querySelector('form[action="validateLogin.php"]');
+
+    loginForm.addEventListener('submit', function (event) {
+      const emailInput = document.querySelector('input[name="t1"]');
+      const passwordInput = document.querySelector('input[name="t2"]');
+
+      if (!isValidEmail(emailInput.value) || passwordInput.value.trim() === '') {
+        event.preventDefault(); // Prevent form submission
+        alert('Please enter a valid email and password.');
+      }
+    });
+
+    function isValidEmail(email) {
+      // Simple email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  });
+</script>
+>>>>>>> origin/master
 
 </body>
 

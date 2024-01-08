@@ -8,6 +8,17 @@ if($se==null){
 }
 
 $message="Admin";
+<<<<<<< HEAD
+=======
+include("config.php");
+$q = "SELECT * FROM admin WHERE email='$se'";
+$result = mysqli_query($con, $q);
+
+if ($row = mysqli_fetch_assoc($result)) {
+    $adminName = $row['name']; // Assuming the column name is 'admin_name' in your database
+    $message = "Welcome, $adminName";
+}
+>>>>>>> origin/master
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +72,11 @@ $message="Admin";
                 <li role="presentation"><a href="ViewEmp.php" id='co'>View Employee</a></li>
                 <li role="presentation"><a href="ViewStockE.php" id='co'>View Stock</a></li>
 				<li role="presentation"><a href="food.php" id='co'>View Food</a></li>
+<<<<<<< HEAD
         <li role="presentation"><a href="index.php" id='co'>LogOut</a></li>
+=======
+        <li role="presentation"><a href="index.php?logout=true" id='co'>LogOut</a></li>
+>>>>>>> origin/master
 
                
               </ul>
@@ -76,7 +91,11 @@ $message="Admin";
     <div class="carousel slide">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(campaign-creators-1166994-unsplash.jpg);background-attachment:fixed">
+<<<<<<< HEAD
         <h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:#6d6875; text-align:center; padding:30vh; font-size:10vw">WelCome <?php echo $message ?></h1>
+=======
+        <h3 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:#6d6875; text-align:center; padding:30vh; font-size:6vw"> <?php echo $message ?></h3>
+>>>>>>> origin/master
           <div class="container">
             
           </div>
