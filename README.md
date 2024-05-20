@@ -64,6 +64,35 @@ PHP (Hypertext Preprocessor) is a widely-used, open-source scripting language th
 4. The form will validate the inputs. If there are any validation errors, an alert message will be displayed.
 5. If all inputs are valid, the form will be submitted.
 
+# Project Setup with XAMPP
+
+## Requirements
+- [XAMPP](https://www.apachefriends.org/index.html)
+
+## Installation
+
+1. **Download and Install XAMPP**: Get XAMPP from the official website and install it.
+
+2. **Clone the Repository**:
+    ```sh
+    git clone https://github.com/Gaurav-P22/C-Man.git
+    ```
+
+3. **Move to XAMPP Directory**:
+    - Place the project folder in `C:/xampp/htdocs/`.
+
+4. **Start Apache and MySQL**:
+    - Open XAMPP Control Panel and start Apache and MySQL.
+
+5. **Access the Project**:
+    - Open a browser and go to `http://localhost/yourproject`.
+
+## License
+This project is licensed under the MIT License.
+
+
+
+
 ## Code Explanation
 
 ### HTML
@@ -124,3 +153,7 @@ function validateDates() {
     return true;
 }
 </script>
+
+
+
+
