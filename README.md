@@ -45,13 +45,13 @@ PHP (Hypertext Preprocessor) is a widely-used, open-source scripting language th
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/canteen-management-stock-form.git
+    https://github.com/Gaurav-P22/C-Man/tree/main.git
     ```
 
 2. Navigate to the project directory:
 
     ```sh
-    cd canteen-management-stock-form
+    cd C-Man
     ```
 
 3. Open the `index.html` file in your web browser.
